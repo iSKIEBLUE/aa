@@ -214,13 +214,68 @@ button.d{background:#FFF5F7;border-color:#F1C0CB;color:#B42343}
 .cd.ev.past{background:#F3F5F9;border-color:#D3DAE6;color:#7A8699}.cd.ev.past::after{background:#A9B4C6}.evi.past{opacity:.62}
 .pie.ghost{background:conic-gradient(#E8F0FF 0 25%,#D9E6FF 0 50%,#E8F0FF 0 75%,#D9E6FF 0);box-shadow:none;outline-color:#E3ECFF}.pie.ghost b{font-size:20px;color:var(--mu)}
 :focus-visible{outline:3px solid #1D4ED8;outline-offset:3px}.ar:focus-visible{outline-color:#fff}
-</style></head><body><div class="scn" aria-hidden="true"><i></i><i></i><i></i></div><div id="app"></div><dialog id="dlg"></dialog><div class="toast" id="toast" popover="manual" role="status"></div>
+/* Achievements: contained carousel */
+.cw.ac{max-width:1240px;margin-left:auto;margin-right:auto;padding:0 28px}
+.ac .gtag{position:static;display:inline-flex;margin:0 0 16px;background:var(--p);border-color:#93B8F8;box-shadow:none}
+.cv{position:relative}
+.cs{--g:20px;display:flex;gap:var(--g);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 0 16px}.cs::-webkit-scrollbar{display:none}
+.cx{position:relative;flex:0 0 calc((100% - 2*var(--g))/3);aspect-ratio:4/3;scroll-snap-align:start;border:3px solid #93B8F8;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#DCE8FF,#BFD3FB);box-shadow:0 10px 26px #1e40af26}
+.cx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cx .bgi{inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);filter:blur(22px) brightness(.85)}
+.cx.fit img:not(.bgi){object-fit:contain}
+.ac .ar{top:calc(50% - 5px);width:48px;height:48px;background:var(--s);border:3px solid #fff;box-shadow:0 6px 16px #0b1d4d40}
+.ac .ar:hover:not(:disabled){background:var(--p);border-color:#fff}
+.ac .ar svg{width:24px;height:24px}.ac .ar.l{left:-22px}.ac .ar.r{right:-22px}
+@media(max-width:860px){.cs{--g:16px}.cx{flex-basis:calc((100% - var(--g))/2)}}
+@media(max-width:560px){.cw.ac{padding:0 24px}.cx{flex-basis:100%}.ac .ar{width:42px;height:42px}.ac .ar.l{left:-20px}.ac .ar.r{right:-20px}}
+/* Blue strip under header; emergency contacts */
+.mn.wide{background:linear-gradient(180deg,#BFD3FB 0,#DCE8FF 220px,#EAF2FF 100%)}.mn.wide+.ft{background:#EAF2FF}
+.fi .ctg{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.fi .ct{flex-direction:row;align-items:center;text-align:left;gap:14px;padding:16px 18px;border-radius:14px}
+.fi .ct i{display:grid;place-items:center;flex:0 0 46px;height:46px;border-radius:12px;background:#ffffff26;border:1px solid #ffffff4d}
+.fi .ct svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fi .ct b{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#BFD3FB}
+.fi .ct span{display:block;margin-top:2px;font-size:22px;font-variant-numeric:tabular-nums}
+/* Header color bar, darker footer, announcement popup, incident reports */
+.top{border-bottom:6px solid transparent;border-image:linear-gradient(90deg,#1E40AF,#3B82F6) 1}
+.fi{background:linear-gradient(180deg,#1E40AF,#14286F)}
+#an{width:min(520px,92vw);padding:0;overflow:auto;animation:anin .24s cubic-bezier(.22,1,.36,1)}
+@keyframes anin{from{opacity:0;transform:translateY(10px) scale(.97)}}
+@media(prefers-reduced-motion:reduce){#an{animation:none}}
+.anh{display:flex;align-items:center;gap:12px;padding:18px 24px;background:linear-gradient(135deg,#1E40AF,#3B82F6);color:#fff}
+.anh h2{margin:0;font-size:24px;color:#fff}.anh svg{width:30px;height:30px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.anc{padding:20px 24px 0}.anc h3{margin:0;font-size:22px;color:var(--p)}.anc small{color:var(--mu)}.anc p{margin:8px 0 0;font-size:19px;white-space:pre-line}
+#an .p{display:flex;width:calc(100% - 48px);margin:22px 24px 24px}
+textarea.tx{font:inherit;font-size:18px;min-height:130px;padding:10px 14px;resize:vertical}
+.icd{display:grid;gap:6px;margin:10px 0;padding:16px 18px;border:1px solid var(--bd);border-radius:14px;background:#fff}.icd p{margin:0}.icd small{color:var(--mu)}
+.ich{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.ich b{font-size:19px}
+.ist{padding:4px 12px;border-radius:99px;font-size:15px;font-weight:700;background:#FFF3D6;color:#8A5300}.ist.ip{background:#DCE8FF;color:#1E3A8A}.ist.ir{background:#DCF5E6;color:#17663A}.ist.ih{background:#EDF1F7;color:#475569}
+.iok{margin-bottom:14px;padding:14px 18px;border:1px solid #9FD8B4;border-radius:14px;background:#DCF5E6;color:#17663A;font-weight:700}
+@media(max-width:560px){.gl>button.p{width:100%}}
+/* Left menu (icons first, toggle shows names), certificate */
+.shl{display:flex;align-items:stretch}.shl.gw+.ft{background:#EAF2FF}.shc{flex:1;min-width:0}
+.rail{flex:0 0 76px;width:76px;background:#fff;border-right:1px solid var(--bd);transition:flex-basis .22s cubic-bezier(.22,1,.36,1),width .22s cubic-bezier(.22,1,.36,1)}.shl.ex .rail{flex-basis:248px;width:248px}
+.rn{position:sticky;top:88px;display:grid;gap:6px;align-content:start;max-height:calc(100vh - 88px);overflow:hidden auto;padding:14px 10px}
+.rb,.rt{display:flex;align-items:center;justify-content:flex-start;gap:14px;width:100%;min-height:52px;padding:0 15px;border:0;border-radius:12px;background:transparent;color:var(--tx);font-size:18px;font-weight:600;white-space:nowrap;box-shadow:none}
+.rb:hover:not(:disabled),.rt:hover:not(:disabled){background:#EEF4FF;border-color:transparent;transform:none}
+.rb.on,.rb.on:hover:not(:disabled){background:var(--p);color:#fff}
+.rt{margin-bottom:8px;padding:0 13.5px;border:1.5px solid #BFD3FB;background:#F3F7FF;color:var(--p)}
+.rn svg{width:26px;height:26px;flex:0 0 26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rb span,.rt span{display:none}.shl.ex .rb span,.shl.ex .rt span{display:inline}
+@media(prefers-reduced-motion:reduce){.rail{transition:none}}
+.ist.id{background:#FDE8EC;color:#B42343}
+.cert{text-align:center;padding:8px 6px}.cert p{margin:0 0 14px;text-align:left;font-size:19px;line-height:1.7}
+.cert .c1{text-align:center;font-size:22px;font-weight:700;color:var(--p)}.cert .c1 small{display:block;font-size:15px;font-weight:600;color:var(--mu)}
+.cert h2{margin:22px 0 18px;font-size:26px;letter-spacing:.04em;text-transform:uppercase}
+.cert .sg{margin:46px 0 4px 55%;padding-top:6px;border-top:1.5px solid var(--tx);font-weight:700}.cert>small{display:block;margin-top:22px;color:var(--mu)}
+@media print{.noprint{display:none!important}}
+</style></head><body><div class="scn" aria-hidden="true"><i></i><i></i><i></i></div><div id="app"></div><dialog id="dlg"></dialog><dialog id="an" aria-label="Announcement"></dialog><div class="toast" id="toast" popover="manual" role="status"></div>
 <script>
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const GEN=['','Male','Female','Other'],CIV=['','Single','Married','Divorced','Widowed','Separated'],VOT=['','Registered','Not Registered','Undecided'];
 const K=['first','middle','last','birth','age','gender','civil','address','zone','contact','emerg','email','occ','edu','voter','pwd','senior','head','hh'];
 /* ---- Data layer (in memory). Each function mirrors a DatabaseHelper method so a database can replace it later ---- */
-const DB={staff:[{name:'Admin User',code:'BRGY001',password:'admin123',role:'admin'},{name:'Resident User',code:'USR001',password:'user123',role:'user'}],res:[],log:[],fam:[],bk:[],set:{records_per_page:'50',default_export_format:'csv',notifications:'1',auto_refresh:'0',auto_backup:'0',backup_frequency:'Daily'},id:1};
+const DB={staff:[{name:'Admin User',code:'BRGY001',password:'admin123',role:'admin'},{name:'Resident User',code:'USR001',password:'user123',role:'user'}],res:[],log:[],fam:[],bk:[],ann:[],inc:[],doc:[],set:{records_per_page:'50',default_export_format:'csv',notifications:'1',auto_refresh:'0',auto_backup:'0',backup_frequency:'Daily'},id:1};
 const S={user:null,tab:'gal',login:false,mode:'in',yr:null,cd:null,cm:new Date(new Date().getFullYear(),new Date().getMonth(),1),page:1,adv:false,err:'',f:{q:'',field:'All Fields',civil:'All',min:'',max:'',zone:''}};
 const full=r=>[r.first,r.middle,r.last].filter(Boolean).join(' ');
 const ageOf=b=>{const d=new Date(b),n=new Date();let a=n.getFullYear()-d.getFullYear();if(n<new Date(n.getFullYear(),d.getMonth(),d.getDate()))a--;return a};
@@ -252,7 +307,7 @@ const BI={plus:'<path d="M12 5v14M5 12h14"/>',dl:'<path d="M12 4v11M7 11l5 5 5-5
 const ib=(n,t)=>`<svg class="bi" viewBox="0 0 24 24" aria-hidden="true">${BI[n]}</svg>${t}`;
 const PC=['#1E40AF','#2563EB','#B45309','#7C3AED','#15803D','#0369A1','#4F46E5','#1D4ED8','#0F766E'];
 S.col=(()=>{try{return localStorage.getItem('rc')==='1'}catch(x){return false}})();
-const shell=()=>{const u=S.user,L=AL();if(!u)S.tab='gal';else if(!L.some(t=>t[0]===S.tab))S.tab='home';return `<header class="top"><div class="bn"><b>Liwayway</b><small>Barangay Resident &amp; Household Profiling System</small></div><nav>${L.map(t=>`<button class="nb${S.tab===t[0]?' on':''}" data-act="tab" data-v="${t[0]}">${t[1]}</button>`).join('')}</nav><div class="who">${u?`<div><b>${esc(u.name)}</b><small>${u.role==='admin'?'Administrator':'Resident'}</small></div><button data-act="out">Log out</button>`:'<button data-act="gologin">Log in</button><button class="p" data-act="gosignup">Sign up</button>'}</div></header><main class="mn${S.tab==='gal'?' wide':''}">${(h=>h?`<header class="ph"><h1>${h[0]}</h1><p>${h[1]}</p></header>`:'')(S.tab==='home'&&u?['Welcome, '+esc(u.name.split(' ')[0])+'!',TT.home[1]]:TT[S.tab])}${V[S.tab]()}</main>${foot()}`};
+const shell=()=>{const u=S.user,L=AL();if(!u)S.tab='gal';else if(!L.some(t=>t[0]===S.tab))S.tab='home';return `<header class="top"><div class="bn"><b>Liwayway</b><small>Barangay Resident &amp; Household Profiling System</small></div><div class="who">${u?`<div><b>${esc(u.name)}</b><small>${u.role==='admin'?'Administrator':'Resident'}</small></div><button data-act="out">Log out</button>`:'<button data-act="gologin">Log in</button><button class="p" data-act="gosignup">Sign up</button>'}</div></header>${u?railOpen(L):''}<main class="mn${S.tab==='gal'?' wide':''}">${(h=>h?`<header class="ph"><h1>${h[0]}</h1><p>${h[1]}</p></header>`:'')(S.tab==='home'&&u?['Welcome, '+esc(u.name.split(' ')[0])+'!',TT.home[1]]:TT[S.tab])}${V[S.tab]()}</main>${u?'</div></div>':''}${foot()}`};
 const opts=(a,v)=>a.map(o=>`<option ${o===v?'selected':''}>${o}</option>`).join('');
 const resView=()=>{const f=S.f,rows=search(),per=+DB.set.records_per_page||50,pg=Math.max(1,Math.min(S.page,Math.ceil(rows.length/per)||1)),sl=rows.slice((pg-1)*per,pg*per);
  return `<div class="hero"><div><h1>${greet()}, ${esc(S.user.name.split(' ')[0])}!</h1><p>${new Date().toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'})}</p></div><div class="hs"><b>${DB.res.length}</b><span>residents</span></div><div class="hs"><b>${new Set(DB.res.map(r=>r.hh).filter(Boolean)).size}</b><span>households</span></div></div>
@@ -306,7 +361,7 @@ const setView=()=>{const s=DB.set;return `<div class="fg" style="grid-template-c
 const V={residents:resView,stats:statsView,log:logView,reports:repView,backup:bkView,settings:setView};
 let tick=0;setInterval(()=>{const n=+DB.set.auto_refresh;if(!n||!S.user||$('#dlg').open||!['stats','charts','log'].includes(S.tab)){tick=0;return}if(++tick>=n){tick=0;S.quiet=true;draw();S.quiet=false}},1000);
 
-const draw=()=>{$('#app').className=(S.quiet?'q ':'')+(S.user&&S.user.role!=='admin'?'ro':'');$('#app').innerHTML=S.login&&!S.user?(S.mode==='up'?signup():login()):shell()};
+const draw=()=>{$('#app').className=(S.quiet?'q ':'')+(S.user&&S.user.role!=='admin'?'ro':'');$('#app').innerHTML=S.login&&!S.user?(S.mode==='up'?signup():login()):shell();annPop()};
 /* ---- Resident form ---- */
 const LB={first:'First name *',middle:'Middle name',last:'Last name *',birth:'Birth date',age:'Age *',gender:'Gender',civil:'Civil status',address:'Address *',zone:'Zone/Purok',contact:'Contact number',emerg:'Emergency contact',email:'Email',occ:'Occupation',edu:'Educational attainment',voter:'Voter status',hh:'Household ID'};
 const TY={birth:'date',age:'number',contact:'tel',emerg:'tel',email:'email'},SEL={gender:GEN,civil:CIV,voter:VOT};
@@ -339,17 +394,59 @@ const homeView=()=>`<div class="hg"><section class="gl"><h2>Financial report</h2
 const ACH=[['a1','Rabies vaccination poster'],['a2','Cash aid line'],['a3','Concrete road'],['a4','Volleyball team'],['a5','Medical mission']],
  TOUR=[['t1','Waterfall'],['t2','White sand beach'],['t3','Green hills and lake']];
 const GI={pin:'<svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',star:'<svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>'};
-const AR=d=>`<button class="ar ${d<0?'l':'r'}" data-act="sl" data-v="${d}" aria-label="${d<0?'Previous':'Next'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d<0?'M15 5l-7 7 7 7':'M9 5l7 7-7 7'}"/></svg></button>`,
- spot=(L,t,ic)=>`<div class="cw"><span class="gtag"><i>${ic}</i>${t}</span><div class="sp">${L.map(x=>{const f='a1,a3'.includes(x[0]);return `<article class="sx"><div class="fr${f?' fit':''}">${f?`<img class="bgi" src="${IMG[x[0]]}" alt="">`:''}<img src="${IMG[x[0]]}" alt="${x[1]}">${AR(-1)}${AR(1)}</div></article>`}).join('')}</div></div>`;
-const CT=[['Police','0917 867 2342'],['Fire Department','0998 989 1351'],['Health Care','0998 339 7247'],['MDRRMO','0998 970 8892']];
-const foot=()=>`<footer class="ft"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#BFD3FB" d="M0 50C240 110 480 -10 720 50S1200 -10 1440 50V120H0Z"/><path fill="#6FA0F5" d="M0 72C240 20 480 120 720 72S1200 20 1440 72V120H0Z"/><path fill="#2563EB" d="M0 92C240 130 480 50 720 92S1200 50 1440 92V120H0Z"/></svg><div class="fi"><h2>Emergency contacts</h2><div class="ctg">${CT.map(c=>`<a class="ct" href="tel:${c[1].replace(/\s/g,'')}"><b>${c[0]}</b><span>${c[1]}</span></a>`).join('')}</div></div></footer>`;
-Object.assign(V,{home:homeView,gal:()=>spot(TOUR,'Tourist Spots',GI.pin)+spot(ACH,'Achievements',GI.star)});
+const AR=(d,a='sl')=>`<button class="ar ${d<0?'l':'r'}" data-act="${a}" data-v="${d}" aria-label="${d<0?'Previous':'Next'}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d<0?'M15 5l-7 7 7 7':'M9 5l7 7-7 7'}"/></svg></button>`,
+ spot=(L,t,ic)=>`<div class="cw"><span class="gtag"><i>${ic}</i>${t}</span><div class="sp">${L.map(x=>{const f='a1,a3'.includes(x[0]);return `<article class="sx"><div class="fr${f?' fit':''}">${f?`<img class="bgi" src="${IMG[x[0]]}" alt="">`:''}<img src="${IMG[x[0]]}" alt="${x[1]}">${AR(-1)}${AR(1)}</div></article>`}).join('')}</div></div>`,
+ achs=(L,t,ic)=>`<section class="cw ac"><span class="gtag"><i>${ic}</i>${t}</span><div class="cv">${AR(-1,'cs')}<div class="cs">${L.map(x=>{const f='a1,a3'.includes(x[0]);return `<article class="cx${f?' fit':''}">${f?`<img class="bgi" src="${IMG[x[0]]}" alt="">`:''}<img src="${IMG[x[0]]}" alt="${x[1]}"></article>`}).join('')}</div>${AR(1,'cs')}</div></section>`;
+const CT=[['Police','0917 867 2342','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg>'],['Fire Department','0998 989 1351','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg>'],['MDRRMO','0998 970 8892','<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>']];
+const foot=()=>`<footer class="ft"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#1E40AF" d="M0 60C240 110 480 10 720 60S1200 10 1440 60V120H0Z"/></svg><div class="fi"><h2>Emergency contacts</h2><div class="ctg">${CT.map(c=>`<a class="ct" href="tel:${c[1].replace(/\s/g,'')}"><i>${c[2]}</i><div><b>${c[0]}</b><span>${c[1]}</span></div></a>`).join('')}</div></div></footer>`;
+Object.assign(V,{home:homeView,gal:()=>spot(TOUR,'Tourist Spots',GI.pin)+achs(ACH,'Achievements',GI.star)});
 Object.assign(TT,{home:['Welcome, kabarangay!','Events and the barangay budget at a glance']});
-const NAV=[['gal','Gallery']],NU=[['residents','Residents'],['stats','Statistics']],NA=[['log','Activity Log'],['reports','Reports'],['backup','Backup'],['settings','Settings']];
+/* ---- Left menu + document requests ---- */
+S.ex=(()=>{try{return localStorage.getItem('rx')==='1'}catch(x){return false}})();
+const NI={home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10M10 20v-6h4v6"/>',gal:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-9 9"/>',residents:IC.residents,stats:IC.stats,docs:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><circle cx="12" cy="14" r="2.5"/>',incident:'<path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/>',ann:'<path d="M3 11v3a1 1 0 0 0 1 1h2l8 4V6L6 10H4a1 1 0 0 0-1 1zM18 9a4 4 0 0 1 0 6"/>',log:IC.log,reports:IC.reports,backup:IC.backup,settings:IC.settings,menu:'<path d="M4 7h16M4 12h16M4 17h16"/>'},
+ nic=k=>`<svg viewBox="0 0 24 24" aria-hidden="true">${NI[k]}</svg>`,
+ railOpen=L=>`<div class="shl${S.ex?' ex':''}${S.tab==='gal'?' gw':''}"><aside class="rail" aria-label="Main menu"><div class="rn"><button class="rt" data-act="rtog" aria-expanded="${!!S.ex}" title="Show or hide the names">${nic('menu')}<span>Hide names</span></button>${L.map(t=>`<button class="rb${S.tab===t[0]?' on':''}" data-act="tab" data-v="${t[0]}" title="${t[1]}" aria-label="${t[1]}"${S.tab===t[0]?' aria-current="page"':''}>${nic(t[0])}<span>${t[1]}</span></button>`).join('')}</div></aside><div class="shc">`,
+ ref=n=>'BRGY-'+String(n).padStart(4,'0'),
+ DT=[['Barangay Clearance',w=>`${w} is a resident of Barangay Liwayway and has no pending case or derogatory record on file in this office.`],
+ ['Certificate of Residency',w=>`${w} is a bona fide resident of Barangay Liwayway.`],
+ ['Certificate of Indigency',w=>`${w} belongs to an indigent family in Barangay Liwayway.`],
+ ['Certificate of Good Moral Character',w=>`${w} is a resident of Barangay Liwayway, is known to be of good moral character, and has no record of misconduct in this office.`],
+ ['First-Time Job Seeker Certificate',w=>`${w} is a resident of Barangay Liwayway and a first-time job seeker, qualified to avail of the benefits of Republic Act No. 11261, the First Time Jobseekers Assistance Act.`],
+ ['Barangay Business Clearance',w=>`this office has no objection to the operation of the business of ${w} within Barangay Liwayway, subject to existing laws and ordinances.`],
+ ['Barangay Blotter Report',w=>`the matter described below was recorded in the barangay blotter at the request of ${w}.`],
+ ['Certificate to File Action',w=>`the dispute involving ${w} was brought before this office and was not settled, and this certification is issued so that the proper case may be filed in court or in the proper government office.`],
+ ['Barangay Certification of Death',w=>`${w} was a resident of Barangay Liwayway and has passed away.`],
+ ['Certificate of Appearance',w=>`${w} appeared before this office.`]],
+ DSC={Pending:'',Approved:'ir',Declined:'id'},
+ docView=()=>{const adm=S.user.role==='admin',L=DB.doc.filter(r=>adm||r.by===S.user.name),ok=S.dok;S.dok='';return `${ok?`<div class="iok" role="status">${ok}</div>`:''}<section class="gl"><h2 class="sec" style="margin-top:0">Request a document</h2><div class="fg"><label>Which document?<select id="dkind">${DT.map(t=>`<option>${t[0]}</option>`).join('')}</select></label><label>Purpose<input id="dpur" maxlength="120" placeholder="e.g. Employment, school, business permit"></label><label>For someone else? (optional)<input id="dwho" maxlength="80" placeholder="Full name, if not you"></label></div><label style="margin-top:14px">More details (optional)<input id="ddet" maxlength="200" placeholder="e.g. business name, date of the event"></label><div class="err" id="de"></div><button class="p" data-act="docadd">Send request</button></section><h2 class="sec">${adm?'All requests':'Your requests'}</h2>${L.length?L.map(r=>`<article class="icd"><div class="ich"><b>${esc(r.ty)}</b><span class="ist ${DSC[r.st]}">${r.st}</span></div><small>For ${esc(r.who||r.by)} · ${esc(r.p)}</small>${r.d?`<p>${esc(r.d)}</p>`:''}<small>${fdt(r.at)} · ${ref(r.id)}${adm?' · '+esc(r.by):''}</small><div class="bar" style="margin:6px 0 0">${adm&&r.st==='Pending'?`<button class="p" data-act="docst" data-v="${r.id}" data-s="Approved">Approve</button><button class="d" data-act="docst" data-v="${r.id}" data-s="Declined">Decline</button>`:''}${adm&&r.st!=='Pending'?`<button data-act="docst" data-v="${r.id}" data-s="Pending">Back to pending</button>`:''}${r.st==='Approved'?`<button data-act="docprt" data-v="${r.id}">View and print</button>`:''}</div></article>`).join(''):'<p>No requests yet.</p>'}`};
+Object.assign(V,{docs:docView});
+Object.assign(TT,{docs:['Documents','Request a barangay document and print it once it is approved']});
+/* ---- Announcements + incident reports ---- */
+const fdt=t=>new Date(t).toLocaleDateString('en-PH',{month:'short',day:'numeric',year:'numeric'}),
+ RT=[['Sanitary violation',['Improper garbage disposal','Clogged drainage or stagnant water','Open burning','Unsanitary establishment','Animal waste','Other']],['Disaster incident',['Flood','Fire','Typhoon damage','Landslide','Earthquake','Other']]],
+ NS=['New','In progress','Resolved'],NSC=['','ip','ir'],NSB=['Mark in progress','Mark resolved','Reopen'],
+ seenReset=()=>{S.seen={};S.seen[S.user.name]=1},
+ annPop=()=>{if(S.login&&!S.user)return;const L=DB.ann.filter(a=>a.on),k=S.user?S.user.name:'guest',d=$('#an');S.seen=S.seen||{};if(!L.length||S.seen[k]||d.open)return;S.seen[k]=1;d.innerHTML=`<div class="anh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11v3a1 1 0 0 0 1 1h2l8 4V6L6 10H4a1 1 0 0 0-1 1zM18 9a4 4 0 0 1 0 6"/></svg><h2>Announcement</h2></div>${L.map(a=>`<article class="anc"><h3>${esc(a.t)}</h3><small>${fdt(a.at)}</small><p>${esc(a.m)}</p></article>`).join('')}<button class="p" data-act="anx">Got it</button>`;d.showModal()},
+ annView=()=>`<section class="gl"><h2 class="sec" style="margin-top:0">New announcement</h2><label>Title<input id="at" maxlength="80"></label><label style="margin-top:14px">Message<textarea class="tx" id="am" maxlength="500" placeholder="What should residents know?"></textarea></label><div class="err" id="ae"></div><button class="p" data-act="annadd">Post announcement</button></section><h2 class="sec">Posted announcements</h2>${DB.ann.length?DB.ann.map(a=>`<article class="icd"><div class="ich"><b>${esc(a.t)}</b><span class="ist ${a.on?'ir':'ih'}">${a.on?'Showing':'Hidden'}</span></div><p>${esc(a.m)}</p><small>${fdt(a.at)}</small><div class="bar" style="margin:6px 0 0"><button data-act="anntog" data-v="${a.id}">${a.on?'Hide':'Show'}</button><button class="d" data-act="anndel" data-v="${a.id}">Delete</button></div></article>`).join(''):'<p>No announcements yet.</p>'}`,
+ incView=()=>{const adm=S.user.role==='admin',L=DB.inc.filter(r=>adm||r.by===S.user.name),ok=S.iok;S.iok='';return `${ok?`<div class="iok" role="status">${ok}</div>`:''}<section class="gl"><h2 class="sec" style="margin-top:0">Report a problem</h2><div class="fg"><label>What are you reporting?<select id="ik">${RT.map(g=>`<optgroup label="${g[0]}">${g[1].map(t=>`<option value="${g[0]}|${t}">${t}</option>`).join('')}</optgroup>`).join('')}</select></label><label>Where did it happen?<input id="iw" maxlength="120" placeholder="Purok, street or landmark"></label><label>Contact number (optional)<input id="ic" type="tel" inputmode="tel" maxlength="20"></label></div><label style="margin-top:14px">What happened?<textarea class="tx" id="ix" maxlength="500" placeholder="Tell us what you saw."></textarea></label><div class="err" id="ie"></div><button class="p" data-act="incadd">Send report</button></section><h2 class="sec">${adm?'All reports':'Your reports'}</h2>${L.length?L.map(r=>{const i=NS.indexOf(r.st);return `<article class="icd"><div class="ich"><b>${esc(r.ty)}</b><span class="ist ${NSC[i]}">${r.st}</span></div><small>${esc(r.cat)} · ${esc(r.w)}</small><p>${esc(r.m)}</p><small>${fdt(r.at)} · ${esc(r.by)}${r.c?' · '+esc(r.c):''}</small>${adm?`<div class="bar" style="margin:6px 0 0"><button data-act="incst" data-v="${r.id}">${NSB[i]}</button></div>`:''}</article>`}).join(''):'<p>No reports yet.</p>'}`};
+Object.assign(V,{ann:annView,incident:incView});
+Object.assign(TT,{ann:['Announcements','Residents see these when they enter the system'],incident:['Incident Reports','Report a sanitary violation or a disaster, and follow what happens next']});
+const NAV=[['gal','Gallery']],NU=[['residents','Residents'],['stats','Statistics'],['docs','Documents'],['incident','Incident Reports']],NA=[['ann','Announcements'],['log','Activity Log'],['reports','Reports'],['backup','Backup'],['settings','Settings']];
 const AL=()=>S.user?[['home','Home'],...NAV,...NU,...(S.user.role==='admin'?NA:[])]:[];
-const ADM=['add','edit','del','fadd','fdel','fhead','export','evadd','evsave','evdel'];
+const ADM=['docst','annadd','anntog','anndel','incst','add','edit','del','fadd','fdel','fhead','export','evadd','evsave','evdel'];
 /* ---- Events ---- */
 const A={
+ anx:()=>$('#an').close(),
+ rtog:()=>{S.ex=!S.ex;$('.shl').classList.toggle('ex',S.ex);$('.rt').setAttribute('aria-expanded',S.ex);try{localStorage.setItem('rx',S.ex?'1':'')}catch(x){}},
+ prt:()=>window.print(),
+ docadd:()=>{const k=$('#dkind').value,p=$('#dpur').value.trim();if(!p){$('#de').textContent='Please write the purpose of the document.';return}DB.doc.unshift({id:DB.id++,ty:k,p,who:$('#dwho').value.trim(),d:$('#ddet').value.trim(),by:S.user.name,at:new Date().toISOString(),st:'Pending'});logA('DOCUMENT','Requested: '+k);S.dok='Thank you. Your request was sent. You can print the document here once it is approved.';draw()},
+ docst:b=>{const r=DB.doc.find(x=>x.id==b.dataset.v),v=b.dataset.s;if(!r||!(v in DSC))return;r.st=v;logA('DOCUMENT',v+': '+r.ty+' for '+(r.who||r.by));draw()},
+ docprt:b=>{const r=DB.doc.find(x=>x.id==b.dataset.v);if(!r||r.st!=='Approved'||(S.user.role!=='admin'&&r.by!==S.user.name))return;const t=DT.find(x=>x[0]===r.ty);$('#dlg').innerHTML=`<div class="cert"><p class="c1">Barangay Liwayway<small>Office of the Punong Barangay</small></p><h2>${esc(r.ty)}</h2><p>TO WHOM IT MAY CONCERN:</p><p>This is to certify that ${t[1]('<b>'+esc(r.who||r.by)+'</b>')}</p>${r.d?`<p>Details: ${esc(r.d)}</p>`:''}<p>This certification is issued on ${fdt(new Date())} upon the request of <b>${esc(r.by)}</b> for ${esc(r.p)}.</p><div class="sg">Punong Barangay</div><small>Reference No. ${ref(r.id)}. Not valid without the signature and dry seal of the Punong Barangay.</small></div><div class="bar noprint" style="margin:18px 0 0"><button class="p" data-act="prt">Print</button><button data-act="close">Close</button></div>`;$('#dlg').showModal()},
+ annadd:()=>{const t=$('#at').value.trim(),m=$('#am').value.trim();if(!t||!m){$('#ae').textContent='Please write a title and a message.';return}DB.ann.unshift({id:DB.id++,t,m,at:new Date().toISOString(),on:1});logA('ANNOUNCEMENT','Posted: '+t);seenReset();draw();toast('Announcement posted')},
+ anntog:b=>{const a=DB.ann.find(x=>x.id==b.dataset.v);if(!a)return;a.on=a.on?0:1;logA('ANNOUNCEMENT',(a.on?'Showing: ':'Hidden: ')+a.t);seenReset();draw()},
+ anndel:b=>{const a=DB.ann.find(x=>x.id==b.dataset.v);if(a&&confirm('Delete this announcement?')){DB.ann=DB.ann.filter(x=>x!==a);logA('ANNOUNCEMENT','Deleted: '+a.t);draw()}},
+ incadd:()=>{const k=$('#ik').value.split('|'),w=$('#iw').value.trim(),m=$('#ix').value.trim(),c=$('#ic').value.trim();if(!w||!m){$('#ie').textContent='Please tell us where it happened and what happened.';return}DB.inc.unshift({id:DB.id++,cat:k[0],ty:k[1],w,m,c,by:S.user.name,at:new Date().toISOString(),st:'New'});logA('INCIDENT',k[0]+': '+k[1]+' at '+w);S.iok='Thank you. Your report was sent to the barangay.';draw()},
+ incst:b=>{const r=DB.inc.find(x=>x.id==b.dataset.v);if(!r)return;r.st=NS[(NS.indexOf(r.st)+1)%3];logA('INCIDENT','Marked '+r.st+': '+r.ty);draw()},
  eye:e=>{['lp','sp','sk'].forEach(i=>{const x=$('#'+i);if(x)x.type=e.checked?'text':'password'})},
  login:()=>{const n=$('#ln').value.trim(),c=$('#lc').value.trim(),p=$('#lp').value;const u=DB.staff.find(s=>s.name===n&&s.code===c&&s.password===p);if(u){S.user={name:n,role:u.role};S.login=false;S.tab='home';S.err='';logA('LOGIN','User logged into system');autoBackup();toast('Welcome, '+n)}else S.err='Wrong name, code or password.';draw()},
  out:()=>{logA('LOGOUT','User logged out');S.user=null;S.tab='gal';draw()},
@@ -378,6 +475,7 @@ Object.assign(A,{
 const qd=()=>{S.quiet=1;draw();S.quiet=0};
 Object.assign(A,{
  sl:e=>{const p=e.closest('.sp'),n=p.children.length,i=(Math.round(p.scrollLeft/p.clientWidth)+ +e.dataset.v+n)%n;p.scrollTo({left:i*p.clientWidth,behavior:'smooth'})},
+ cs:e=>{const p=e.closest('.cv').querySelector('.cs'),v=+e.dataset.v,w=p.children[0].offsetWidth+parseFloat(getComputedStyle(p).columnGap||0),mx=p.scrollWidth-p.clientWidth;let x=p.scrollLeft+v*w;if(v>0&&p.scrollLeft>=mx-4)x=0;else if(v<0&&p.scrollLeft<=4)x=mx;p.scrollTo({left:Math.max(0,Math.min(mx,x)),behavior:'smooth'})},
  gologin:()=>{S.login=true;S.mode='in';S.err='';draw()},gosignup:()=>{S.login=true;S.mode='up';S.err='';S.f=null;draw()},
  signup:()=>{const n=$('#sn').value.trim(),c=$('#sc').value.trim(),p=$('#sp').value,q=$('#sk').value;S.f={n,c};S.err=!n||!c||!p?'Please fill in every box.':p.length<6?'Password needs at least 6 characters.':p!==q?'The two passwords do not match.':DB.staff.some(x=>x.code===c)?'That ID code is already used.':'';if(!S.err){DB.staff.push({name:n,code:c,password:p,role:'user'});S.f=null;S.user={name:n,role:'user'};S.login=false;S.tab='home';logA('SIGNUP','New account created');toast('Welcome, '+n)}draw()},back:()=>{S.login=false;draw()},
  yr:e=>{S.yr=S.yr==e.dataset.v?null:e.dataset.v;qd()},
